@@ -7,7 +7,6 @@ sections:
 - type: document
   path: config.yml
   label: Configuration
-  match: "**/*"
 - type: directory
   path: content
   label: Pages
@@ -36,6 +35,7 @@ build:
   - HUGO_ENV=staging
   - HUGO_VERSION=0.74.3
   preview_output_directory: public
+  install_dependencies_command: hugo
   preview_docker_image: forestryio/hugo:latest
   mount_path: "/srv"
   working_dir: "/srv"
